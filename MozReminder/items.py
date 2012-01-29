@@ -6,6 +6,7 @@
 from scrapy.item import Item, Field
 
 class MozreminderItem(Item):
-    # define the fields for your item here like:
-    # name = Field()
+     tarea = Field()
+     link_tarea = Field()
+     limite = Field()
     pass
