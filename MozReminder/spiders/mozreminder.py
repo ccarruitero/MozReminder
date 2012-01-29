@@ -5,6 +5,7 @@ from MozReminder.items import MozreminderItem
 
 class TareaSpider(BaseSpider):
   name = "tareas"
+  allowed_domains = ["mozilla-hispano.org"]
   start_url = [
 	"https://www.mozilla-hispano.org/documentacion/Tareas"
   ]
@@ -12,7 +13,6 @@ class TareaSpider(BaseSpider):
   def parse(self, response):
 	hxs = HtmlXPathSelector(response)
         sites = hxs.select('//table/tr')
-        items = []
         for site in sites:
                 item = MozreminderItem()
                 item['tarea'] = site.select('td/a/text()').extract()

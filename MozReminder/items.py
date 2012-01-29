@@ -9,4 +9,4 @@ class MozreminderItem(Item):
     tarea = Field()
     link_tarea = Field()
     limite = Field()
-    pass
+
