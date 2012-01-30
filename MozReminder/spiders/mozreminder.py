@@ -18,7 +18,7 @@ class TareaSpider(BaseSpider):
           item = MozreminderItem()
           item['tarea'] = site.select('td/a/text()').extract()
           item['link_tarea'] = site.select('td/a/@href').extract()
-          item['limite'] = site.select('td[6]').extract()
+          item['limite'] = site.select('td[6]/text()').extract()
           items.append(item)
       return items
 
