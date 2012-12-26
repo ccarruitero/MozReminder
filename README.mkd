@@ -1,0 +1,2 @@
+# MozReminder
+this was moved to [here](https://github.com/mozillahispano/smw-reminder)
